@@ -1,0 +1,14 @@
+.flash-toast {
+  position: fixed;
+  left: 50%;
+  top: 76px; /* below the navbar */
+  transform: translateX(-50%);
+  background: #3b0f78;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgba(99, 66, 170, .35),
+              inset 0 0 0 1px rgba(255,255,255,.15);
+  font-weight: 700;
+  z-index: 9999;
+}

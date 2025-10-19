@@ -1,0 +1,126 @@
+/* --- Navbar container --- */
+.ff-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #56208f;
+  border-bottom: 3px solid #ffce00;
+}
+
+/* Layout for brand + links + cart */
+.ff-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto; /* brand | links | cart | hamburger */
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Brand --- */
+.brand {
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+/* --- Links (desktop) --- */
+.links.desktop {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.links.desktop a {
+  text-decoration: none;
+  color: #7a0d0d;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 0 2px 0 rgba(0,0,0,.15),
+              inset 0 0 0 2px rgba(0,0,0,.06);
+  transition: all 0.2s ease;
+}
+
+.links.desktop a:hover {
+  background: #ffebee;
+  transform: translateY(-1px);
+}
+
+.links.desktop a.active {
+  outline: 3px solid rgba(255,255,255,.65);
+}
+
+/* Cart slot */
+.cart-slot {
+  display: grid;
+  place-items: center;
+}
+
+/* --- Hamburger button --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.hamburger span {
+  height: 3px;
+  width: 22px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.is-open span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* --- Mobile menu (dropdown) --- */
+.links.mobile {
+  display: flex;
+  flex-direction: column;
+  background: #3b0f78;
+  text-align: center;
+  padding: 12px 0;
+  gap: 8px;
+  border-bottom: 3px solid #ffce00;
+}
+.links.mobile a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px;
+  transition: background 0.2s ease;
+}
+.links.mobile a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* --- Responsive behavior --- */
+@media (max-width: 768px) {
+  .links.desktop {
+    display: none; /* hide desktop links */
+  }
+
+  .hamburger {
+    display: flex; /* show burger */
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+}

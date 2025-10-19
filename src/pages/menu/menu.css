@@ -1,0 +1,71 @@
+.menu-page {
+  background: linear-gradient(to bottom, #4b1482 0%, #1f0433 100%);
+  min-height: 100vh; color: #fff;
+}
+.menu-banner {
+  background: linear-gradient(135deg, #673ab7 0%, #512da8 40%, #311b92 100%);
+  padding: 3rem 1rem; text-align: center; border-bottom: 3px solid #ffce00;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+}
+.menu-banner h1 { margin: 0 0 .5rem; font-weight: 800; }
+
+.menu-board { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+
+.menu-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 1rem; align-items: center; margin-bottom: 1rem;
+}
+.menu-btn {
+  background: #f9edd1; border: none; padding: 1rem 1.6rem; border-radius: 10px;
+  font-weight: 800; box-shadow: 8px 8px 0 #ffce00; cursor: pointer;
+}
+.menu-btn.is-active { outline: 3px solid rgba(255,255,255,.55); background: #fff4d9; }
+.done-chip {
+  justify-self: end; background: #f9edd1; color: #000; padding: .8rem 1.2rem; border-radius: 999px; font-weight: 800;
+  box-shadow: 8px 8px 0 #ffce00; text-decoration: none;
+}
+
+.product-grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(3, 1fr); }
+.p-card { background: #151926; border-radius: 18px; overflow: hidden; color: #e9eefc; display: flex; flex-direction: column;
+  box-shadow: 0 8px 26px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);
+}
+.p-media { height: 160px; display: grid; place-items: center; background: #1b2035; }
+.p-media .emoji { font-size: 56px; }
+.p-body { padding: 14px; display: grid; gap: 8px; }
+.p-badge { background: rgba(255,206,0,.18); color: #ffce00; padding: 4px 8px; border-radius: 999px; width: fit-content; font-size: 12px; }
+.p-title { margin: 0; font-weight: 800; color: #fff; }
+.p-meta { display: flex; gap: 10px; align-items: center; }
+.p-price { color: #ff6961; font-weight: 900; }
+.p-cta { margin-top: 2px; background: #e53935; color: #fff; border: none; border-radius: 10px; padding: 10px 14px; font-weight: 800; cursor: pointer; }
+
+@media (max-width: 900px) {
+  .menu-row { grid-template-columns: 1fr 1fr; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .menu-row { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr; }
+}
+/* Center the hint across the grid */
+.hint {
+  grid-column: 1 / -1;       /* span all columns */
+  text-align: center;
+  padding: 2rem 0;
+  opacity: 0.85;
+  font-weight: 700;
+}
+
+/* Make the Done chip behave like a button consistently */
+.done-chip {
+  justify-self: end;
+  background: #f9edd1;
+  color: #000;
+  padding: .8rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 8px 8px 0 #ffce00;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+.done-chip:focus { outline: 3px solid rgba(255,255,255,.55); }

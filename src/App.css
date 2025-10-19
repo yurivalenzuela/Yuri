@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8eedc;
+}
+
+/* Nav */
+.nav {
+  background: #4b178a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-bottom: 4px solid #f2c400;
+}
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+.pill {
+  background: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.pill.active {
+  background: #f2c400;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+.order-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tab {
+  background: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+.tab.active {
+  background: #f2c400;
+}

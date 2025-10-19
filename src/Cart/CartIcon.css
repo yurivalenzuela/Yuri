@@ -1,0 +1,57 @@
+.cart-icon {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+  background: transparent;
+  transition: all .25s ease;
+  z-index: 3;
+}
+
+.cart-icon:hover {
+  background: rgba(255,255,255,.15);
+  transform: scale(1.05);
+}
+
+/* 🔥 Animated badge */
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+  z-index: 4;
+  box-shadow: 0 0 0 2px #4b2a92;
+  animation: cartPulse 1.3s ease-in-out infinite; /* 👈 this makes it blink */
+}
+
+/* ✨ Pulse (blinking) animation */
+@keyframes cartPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 2px #4b2a92, 0 0 10px rgba(255, 59, 48, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+    box-shadow: 0 0 0 2px #4b2a92, 0 0 20px rgba(255, 59, 48, 0.8);
+  }
+}
+
+.cart-icon,
+.cart-badge {
+  backdrop-filter: none;
+}

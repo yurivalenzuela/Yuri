@@ -1,0 +1,142 @@
+/* ===== Base ===== */
+.about-page {
+  color: #e9e5f7;
+  background: linear-gradient(to bottom, #4b1482 0%, #1f0433 100%);
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+/* ===== Hero ===== */
+.about-hero {
+  background: linear-gradient(135deg, #7b3ff3 0%, #5b2bbd 42%, #3a1a8f 100%);
+  padding: clamp(2.8rem, 6vw, 4.2rem) 0;
+  border-bottom: 3px solid #ffce00; /* Faith & Flour gold accent */
+  box-shadow: 0 10px 30px rgba(0,0,0,.35) inset;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.1rem, 4.5vw, 3.3rem);
+  font-weight: 900;
+  letter-spacing: .3px;
+  margin: 0 0 .5rem;
+}
+
+.about-hero .subtitle {
+  color: #f3e5ff;
+  opacity: .95;
+  font-size: clamp(1rem, 2.3vw, 1.2rem);
+  max-width: 760px;
+}
+
+/* ===== Body ===== */
+.about-body {
+  padding: 2.5rem 0 4rem;
+}
+
+.block {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: clamp(1.2rem, 3vw, 1.6rem);
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  margin: 0 0 1.2rem;
+}
+
+.block h2 {
+  margin: 0 0 .6rem;
+  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+  font-weight: 800;
+}
+
+.block p {
+  margin: 0;
+  line-height: 1.7;
+  color: #f1eaff;
+}
+
+.why {
+  margin: .3rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: .4rem;
+}
+
+.why li { line-height: 1.6; }
+
+/* ===== Impact ===== */
+.impact {
+  margin-top: 1rem;
+}
+
+.impact h3 {
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-weight: 800;
+  margin: 0 0 .8rem;
+  color: #ffe4a6;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .8rem;
+}
+
+.impact .card {
+  background: #1a1430;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+.impact .big {
+  font-size: clamp(1.4rem, 3.6vw, 2rem);
+  font-weight: 900;
+  color: #ff6b6b;
+}
+
+.impact .label {
+  margin-top: .25rem;
+  color: #cfd1ff;
+  font-weight: 600;
+  opacity: .9;
+}
+
+/* ===== Banner ===== */
+.banner {
+  margin-top: 1.2rem;
+  background: linear-gradient(135deg, #f24166 0%, #e53935 60%, #c62828 100%);
+  border-radius: 18px;
+  padding: clamp(1rem, 3vw, 1.4rem);
+  text-align: center;
+  box-shadow: 0 14px 34px rgba(229,57,53,.35);
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+.banner p {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* Footer note */
+.tiny-note {
+  text-align: center;
+  opacity: .7;
+  margin-top: .9rem;
+  font-size: .9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .impact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .impact-grid { grid-template-columns: 1fr; }
+}
